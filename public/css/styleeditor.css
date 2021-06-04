@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
+* { padding: 0; margin: 0; box-sizing: border-box }
+body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
+
+/**************/
+
+:root {
+	--blurnum:0px;
+	--greynum:0%;
+	--brightnum:100%;
+	--contrastnum:100%;
+	--flipx:1;
+	--flipy:1;
+	--rotateR:0deg;
+	--rotateL:0deg;
+	--cardwidth:auto;
+	--opacitynum:100%;
+	--invertnum:0%;
+}
+.Break{
+    display: block;
+    content: "";
+    margin-top: var(--imagespace);
+}
+.Center{
+	margin: auto;
+	display: table;
+	background: transparent;
+		
+}
+
+.text-center{
+text-align: center;
+font-size: 50px;
+margin-bottom: 10px;
+text-shadow: 0px 0px 2px #fff
+
+}
+
+.Image-Edit-Card{
+	margin: auto;
+	display: table;
+	//background: #fff;
+	padding:auto;
+	box-shadow: 0px 0px 5px #ddd;
+	width: var(--cardwidth);
+
+}
+/*Image editors///////////////////////*/
+	.Blur{
+		filter: blur(var(--blurnum));
+	}
+	.Grey{
+		filter: grayscale(var(--greynum));
+	}
+	.Brightness{
+		filter: brightness(var(--brightnum));
+	}
+	.Contrast{
+		filter: contrast(var(--contrastnum));
+	}
+	.Opacity{
+		filter:opacity(var(--opacitynum));
+	}
+	.Invert{
+		filter:invert(var(--invertnum));
+	}
+
+/*Image transformers//////////////////*/
+	.FlipX{ /*Flip Horizontally*/
+		transform: scaleX(var(--flipx));
+	}
+	.FlipY{ /*Flip Vertically*/
+		transform: scaleY(var(--flipy));
+	}
+	.RotateR{ /*90 degrees right*/
+		transform: rotate(var(--rotateR))
+	}
+	.RotateL{ /*90 degrees Left*/
+		transform: rotate(var(--rotateL))
+	}
+/*////////////////////////////////////*/
+.invertslider {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.invertslider:hover {
+  opacity: 1;
+}
+
+.invertslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.blurslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.blurslider:hover {
+  opacity: 1;
+}
+
+.blurslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.greyscaleslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.greyscaleslider:hover {
+  opacity: 1;
+}
+
+.greyscaleslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.opacityslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.opacityslider:hover {
+  opacity: 1;
+}
+
+.opacityslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.brightnessslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.brightnessslider:hover {
+  opacity: 1;
+}
+
+.brightnessslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.contrastslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.contrastslider:hover {
+  opacity: 1;
+}
+
+.contrastslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}	
+.Image-Edit{
+	max-width: 100%;
+	height: 100%;
+	text-align: center;
+	//background: #fff;
+	border-radius: 0%;
+	overflow: hidden;margin-right: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	//outline: 2.2px groove black;
+
+}
+
+.profile-images img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.custom-file input[type='file']{
+	display: none;
+	
+}
+
+.custom-file label{
+	cursor: pointer;
+	color: #000;
+	text-align: center;
+	display: table;
+	margin: auto;
+	margin-top: 20px;
+	outline: 1px groove black;
+	background-color:#f2f2f2;
+
+	//box-shadow: 0px 0px 5px #000;
+}
+.custom-file:hover label{
+	cursor: pointer;
+	color: #000;
+	text-align: center;
+	display: table;
+	margin: auto;
+	margin-top: 20px;
+	outline: 1px groove black;
+	background-color:#f2f2f2;
+	opacity: 0.7;
+	//box-shadow: 0px 0px 5px #000;
+}
+
+.edit label{
+
+background: #0066A2;
+
+color: white;
+
+border-style: outset;
+
+border-color: #0066A2;
+
+height: 50px;
+
+width: 100px;
+
+font: bold 15px arial, sans-serif;
+
+text-shadow:none;
+
+}
+
+body {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

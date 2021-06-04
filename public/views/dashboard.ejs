@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<title> CS Image Editor </title>
+<!--   -->
+<html>
+<h1>Dashboard</h1>
+<p> Welcome <%= user.name %></p>
+<a href="/users/logout">Logout</a>
+<link rel="stylesheet" href="css/style.css">
+
+<head>
+	<link rel="icon" href="images/image.png">
+	  <meta charset="utf-8"/>
+    <style type="text/css"></style>
+</head>
+<body>
+
+<h2 class="text-center" style="color:white;">CS Image Editor</h2>
+	<h3 class="byname" style="color:white;">by Simon N, Ethan C, and Zion T</h3>
+
+
+
+
+	<div class="Image-Edit-Card">
+		
+
+		<div class="Image-Edit">
+
+	<img src="images/image.png" id="upload-img">
+
+		</div>
+		<div class="custom-file">
+			<b>
+			<form action="fileupload" method="post" enctype="multipart/form-data">
+			<label style="font-family: Helvetica ; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; box-shadow: 0px 0px 3px #000;" for="fileupload">&nbsp Upload Image &nbsp</label>
+
+			<input type="file" id="fileupload" name="filetoupload" ><br>
+		</div>
+
+
+		<div class="edit">
+		<b>	
+			<div style="text-align:center" >  
+    		<input disabled="false" type="submit" value = EDIT id="edit" style="font-family: Helvetica ; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; <" >
+			</div>  
+			</b>
+		</div>
+
+		
+<!----------------------------------------------------------------------->
+<script src="js/jquery-latest.min.js"></script>
+<script>
+
+
+
+$(function(){
+		$("#fileupload").change(function(event) {
+			var x = URL.createObjectURL(event.target.files[0]);
+			$("#upload-img").attr("src",x);
+			console.log(event);
+			EnableSubmit();
+		});
+	});
+	function EnableSubmit(){
+
+		if(fileupload.value == "") 
+			alert("Please Uplaod Image")
+		else {
+			
+			$("#edit").prop("disabled",false)
+		}
+	}
+
+	
+</script>
+</body>
+
+</html>
