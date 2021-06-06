@@ -38,7 +38,6 @@ function Apply() {
 		});
 	});
 };
-
 	function getImgH(canvas,img) {
 		canvas.height = img.height
 		return(img.height)
@@ -47,3 +46,12 @@ function Apply() {
 		canvas.width = img.width
 		return(img.width)
 	}
+
+//////////////////////////////////////////////////////
+function Save() {
+	Caman("#myCanvas", function () {
+      	this.render(function() {
+      		this.save(/*'./editedImage.png'*/);
+		});
+    });
+}
