@@ -19,6 +19,7 @@ function Apply() {
 		noiseval = document.getElementById('noiseInput').value
 		tintval = document.getElementById('tintInput').value;
 		tintOpacityval = document.getElementById('tintOpacityInput').value
+		greyscaleval = document.getElementById('greyscaleInput').value
 		//val = document.getElementById('').value
 		if(invertval == 1)
 			this.invert()
@@ -27,13 +28,16 @@ function Apply() {
 		this.contrast(parseInt(contrastval))
 		this.hue(hueval)
 		this.noise(noiseval)
+		// this.rotate(90);
+		if(greyscaleval == 1)
+			this.greyscale()
 		this.newLayer(function() {
     		this.setBlendingMode("overlay");
     		this.opacity(tintOpacityval);
     		this.fillColor(tintval);
 		});
-		// this.rotate(90);
 		this.render(function () {
+			// this.save($.get("/fileupload"))
 			console.log("Changes Saved")
 		});
 	});
