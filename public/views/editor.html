@@ -108,7 +108,7 @@
 	<br>
 		<br>
 	<!------------------------------------------------>
-		<button onclick="DownloadCanvasAsImage()" id="savebtn" class="btn btn-success">Save Image</button>
+		<input type="button" onclick="Save()" id="savebtn" class="btn btn-success" value="Save Image">
 		<br>
 			<br>
 	<!-------->
@@ -131,18 +131,6 @@
 	}
     $(document).ready(showImage); 
     /////////////////////////////////////////
-
-    function DownloadCanvasAsImage() {
-    	let downloadLink = document.createElement('a')
-    	downloadLink.setAttribute('download','image1.png')
-    	let canvas = document.getElementById('myCanvas')
-    	canvas.toBlob(function(blob) {
-    		let url = URL.createObjectURL(blob)
-    		downloadLink.setAttribute('herf',url)
-    		downloadLink.click()
-    	})
-    	console.log("downloaded")
-    }  
 </script>
 	<!-------------------------------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js" integrity="sha512-JjFeUD2H//RHt+DjVf1BTuy1X5ZPtMl0svQ3RopX641DWoSilJ89LsFGq4Sw/6BSBfULqUW/CfnVopV5CfvRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
