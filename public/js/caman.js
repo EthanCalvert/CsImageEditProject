@@ -1,4 +1,5 @@
 // alert('CAMAN')
+let oldrotateval = 0;
 image1.onload = function() { Apply() }
 function Apply() {
 	var canvas = document.getElementById("myCanvas");
@@ -8,19 +9,20 @@ function Apply() {
 		let h = getImgH(canvas,img);
 		ctx.drawImage(img, 0, 0, w, h);
 		canvas.removeAttribute('data-caman-id')
+			contrastval = document.getElementById('contrastInput').value
+			vibranceval = document.getElementById('vibranceInput').value
+			brightnessval = document.getElementById('brightInput').value
+			invertval = document.getElementById('invertInput').value
+			hueval = document.getElementById('hueInput').value
+			noiseval = document.getElementById('noiseInput').value
+			tintval = document.getElementById('tintInput').value;
+			tintOpacityval = document.getElementById('tintOpacityInput').value
+			greyscaleval = document.getElementById('greyscaleInput').value
+			rotateval = document.getElementById('rotateInput').value
+			//val = document.getElementById('').value
 	////////////////////////////////////////////////
 	Caman("#myCanvas", function () {
 		ctx.clearRect(0, 0, w, h);
-		contrastval = document.getElementById('contrastInput').value
-		vibranceval = document.getElementById('vibranceInput').value
-		brightnessval = document.getElementById('brightInput').value
-		invertval = document.getElementById('invertInput').value
-		hueval = document.getElementById('hueInput').value
-		noiseval = document.getElementById('noiseInput').value
-		tintval = document.getElementById('tintInput').value;
-		tintOpacityval = document.getElementById('tintOpacityInput').value
-		greyscaleval = document.getElementById('greyscaleInput').value
-		//val = document.getElementById('').value
 		if(invertval == 1)
 			this.invert()
 		this.vibrance(vibranceval)
@@ -41,6 +43,19 @@ function Apply() {
 			console.log("Changes Saved")
 		});
 	});
+	    ctx.clearRect(0,0,w,h);
+	    ctx.save();
+	    ctx.translate(w/2,h/2);
+	    ctx.rotate(rotateval*Math.PI/180);
+	    if(oldrotateval == rotateval) {
+	    	ctx.drawImage(img,-w/2,-h/2,w,h);
+	    	origOrien = false;
+	    }
+	    else {
+	    	ctx.drawImage(img,-h/2,-w/2,h,w);	
+	    	origOrien = true;
+	    }
+	oldrotateval = rotateval
 };
 	function getImgH(canvas,img) {
 		canvas.height = img.height
@@ -50,7 +65,6 @@ function Apply() {
 		canvas.width = img.width
 		return(img.width)
 	}
-
 //////////////////////////////////////////////////////
 function Save() {
 	Caman("#myCanvas", function () {
