@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
+* { padding: 0; margin: 0; box-sizing: border-box }
+body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
+
+/**************/
+
+
+.WelcomeText{
+text-align: center;
+font-size: 50px;
+margin-bottom: 10px;
+text-shadow: 0px 0px 2px #fff;
+}
+.CreateText{
+text-align: center;
+font-size: 20px;
+margin-bottom: 10px;
+text-shadow: 0px 0px 2px #fff;
+}
+
+.Image-Edit-Card{
+	margin: auto;
+	display: table;
+	background: #fff;
+	opacity: 1;
+	padding: 30px 40px;
+	box-shadow: 0px 0px 5px #ddd;
+
+}
+.RegisterText{
+display: block;
+text-align: center;
+font-size: 20px;
+margin-bottom: 10px;
+//text-shadow: 0px 0px 2px #000;
+}
+.LoginText{
+display: block; 
+text-align: center;
+
+font-size: 20px;
+margin-bottom: 10px;
+//text-shadow: 0px 0px 2px #fff;
+}
+
+body {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
