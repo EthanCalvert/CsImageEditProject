@@ -1,377 +1,75 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
-* { padding: 0; margin: 0; box-sizing: border-box }
-body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
-
-/**************/
-
-:root {
-}
-.Break{
-    display: block;
-    content: "";
-    margin-top: var(--imagespace);
-}
-.Center{
-	margin: auto;
-	display: table;
-	background: transparent;
-		
-}
-
-.text-center{
-text-align: center;
-font-size: 50px;
-margin-bottom: 10px;
-text-shadow: 0px 0px 2px #fff
-
-}
-
-.Image-Edit-Card{
-	margin: auto;
-	display: table;
-	//background: #fff;
-	padding:auto;
-	box-shadow: 0px 0px 5px #ddd;
-	width: var(--cardwidth);
-
-}
-/*////////////////////////////////////*/
-
-.p {
-  font-size: 25px;
-  color:white;
-  text-shadow: 0px 0px 3px #000; 
-  text-align: center;
-}
-
-/*ToolTips////////////////////////////*/
-/* Tooltip container */
-.tooltip {
-  display: inline-block;
-  border-bottom: 1px dotted white; /* If you want dots under the hoverable text */
-}
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  background-color: black;
-  color: #fff;
-  padding: 10px 10px;
-  border-radius: 6px;
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-/*////////////////////////////////////*/
-
-.invertslider {
-  -webkit-appearance: none;
-  width: 30px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.invertslider:hover {
-  opacity: 1;
-}
-
-.invertslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.blurslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.blurslider:hover {
-  opacity: 1;
-}
-
-.blurslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.vibranceslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.vibranceslider:hover {
-  opacity: 1;
-}
-
-.vibranceslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.opacityslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.opacityslider:hover {
-  opacity: 1;
-}
-
-.opacityslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.brightnessslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.brightnessslider:hover {
-  opacity: 1;
-}
-
-.brightnessslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.contrastslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.contrastslider:hover {
-  opacity: 1;
-}
-
-.contrastslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.hueslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.hueslider:hover {
-  opacity: 1;
-}
-
-.hueslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.noiseslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.noiseslider:hover {
-  opacity: 1;
-}
-
-.noiseslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.tintslider {
-  -webkit-appearance: none;
-  width: 750px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.tintslider:hover {
-  opacity: 1;
-}
-.tintpicker:hover {
-  opacity: 1;
-}
-
-.tintslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.greyscaleslider {
-  -webkit-appearance: none;
-  width: 30px;
-  height: 7px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  vertical-align: middle;
-}
-.greyscaleslider:hover {
-  opacity: 1;
-}
-
-.greyscaleslider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 30px;
-  background: #006eff;
-  cursor: pointer;
-}   /*//////////*/
-.Image-Edit{
-	max-width: 100%;
-	height: 100%;
-	text-align: center;
-	//background: #fff;
-	border-radius: 0%;
-	overflow: hidden;margin-right: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
-	margin-left: 20px;
-	//outline: 2.2px groove black;
-
-}
-
-.profile-images img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.custom-file input[type='file']{
-	display: none;
-	
-}
-
-.custom-file label{
-	cursor: pointer;
-	color: #000;
-	text-align: center;
-	display: table;
-	margin: auto;
-	margin-top: 20px;
-	outline: 1px groove black;
-	background-color:#f2f2f2;
-
-	//box-shadow: 0px 0px 5px #000;
-}
-.custom-file:hover label{
-	cursor: pointer;
-	color: #000;
-	text-align: center;
-	display: table;
-	margin: auto;
-	margin-top: 20px;
-	outline: 1px groove black;
-	background-color:#f2f2f2;
-	opacity: 0.7;
-	//box-shadow: 0px 0px 5px #000;
-}
-
-.edit label{
-
-background: #0066A2;
-
-color: white;
-
-border-style: outset;
-
-border-color: #0066A2;
-
-height: 50px;
-
-width: 100px;
-
-font: bold 15px arial, sans-serif;
-
-text-shadow:none;
-
-}
-
-body {
-  background-image: url('background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+// alert('CAMAN')
+let oldrotateval = 0;
+image1.onload = function() { Apply() }
+function Apply() {
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("image1");
+		let w = getImgW(canvas,img);
+		let h = getImgH(canvas,img);
+		ctx.drawImage(img, 0, 0, w, h);
+		canvas.removeAttribute('data-caman-id')
+			contrastval = document.getElementById('contrastInput').value
+			vibranceval = document.getElementById('vibranceInput').value
+			brightnessval = document.getElementById('brightInput').value
+			invertval = document.getElementById('invertInput').value
+			hueval = document.getElementById('hueInput').value
+			noiseval = document.getElementById('noiseInput').value
+			tintval = document.getElementById('tintInput').value;
+			tintOpacityval = document.getElementById('tintOpacityInput').value
+			greyscaleval = document.getElementById('greyscaleInput').value
+			rotateval = document.getElementById('rotateInput').value
+			//val = document.getElementById('').value
+	////////////////////////////////////////////////
+	Caman("#myCanvas", function () {
+		ctx.clearRect(0, 0, w, h);
+		if(invertval == 1)
+			this.invert()
+		this.vibrance(vibranceval)
+		this.brightness(brightnessval)
+		this.contrast(parseInt(contrastval))
+		this.hue(hueval)
+		this.noise(noiseval)
+		// this.rotate(90);
+		if(greyscaleval == 1)
+			this.greyscale()
+		this.newLayer(function() {
+    		this.setBlendingMode("overlay");
+    		this.opacity(tintOpacityval);
+    		this.fillColor(tintval);
+		});
+		this.render(function () {
+			// this.save($.get("/fileupload"))
+			console.log("Changes Saved")
+		});
+	});
+	    ctx.clearRect(0,0,w,h);
+	    ctx.save();
+	    ctx.translate(w/2,h/2);
+	    ctx.rotate(rotateval*Math.PI/180);
+	    if(oldrotateval == rotateval) {
+	    	ctx.drawImage(img,-w/2,-h/2,w,h);
+	    	origOrien = false;
+	    }
+	    else {
+	    	ctx.drawImage(img,-h/2,-w/2,h,w);	
+	    	origOrien = true;
+	    }
+	oldrotateval = rotateval
+};
+	function getImgH(canvas,img) {
+		canvas.height = img.height
+		return(img.height)
+	}
+	function getImgW(canvas,img) {
+		canvas.width = img.width
+		return(img.width)
+	}
+//////////////////////////////////////////////////////
+function Save() {
+	Caman("#myCanvas", function () {
+      	this.render(function() {
+      		this.save(/*'./editedImage.png'*/);
+		});
+    });
 }
