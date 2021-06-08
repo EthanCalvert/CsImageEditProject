@@ -17,7 +17,8 @@ app.use(express.static('./public/views/images'));
 //passport config:
 require('./config/passport')(passport)
 //mongoose
-mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTopology : true})
+// mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTopology : true})
+mongoose.connect('mongodb://173.255.210.209/test',{useNewUrlParser: true, useUnifiedTopology : true})
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
 
@@ -60,7 +61,7 @@ app.use(bodyParser.json());
 app.use(express.static('./public'));
 app.use(routes);
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(4010, function () {
+  console.log('Example app listening on port 4010!');
 });
 
