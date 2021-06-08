@@ -24,68 +24,81 @@
 <br>
 <!--------> <!-------->
 <b>
-	<p style="font-size: 25px; color:white; text-shadow: 0px 0px 3px #000; text-align: center" > 
-	<!-- <label for=blurInput>Blur</label>
-	<br>
-	<input type="range" id="blurInput" min="0"  max="10" step="1" value="0" onchange="Apply()" class=blurslider>
-	<br> -->
 	<!-------->
-	<label for=vibranceInput>Vibrance</label>
+			<div class=tooltip>
+	<label for="vibranceInput" class="p">Vibrance</label>
+			<span class="tooltiptext">Increases/ Decreases strength of each color.</span></div>
 	<br>
 		<br>
-	<input type="range" id="vibranceInput" min="-150" max="150" value="0" step="5" onchange="Apply()" class=greyscaleslider>
+	<input type="range" id="vibranceInput" min="-150" max="150" value="0" step="5" onchange="Apply()" class=vibranceslider>
 	<br>
 		<br>
 	<!-------->
-	<label for=brightInput>Brightness</label>
+			<div class=tooltip>
+	<label for=brightInput class="p">Brightness</label>
+			<span class="tooltiptext">Brightens/ Darkens image.</span></div>
 	<br>
 		<br>
 	<input type="range" id="brightInput" min="-100" max="100" step="5" value="0" onchange="Apply()" class=brightnessslider>
 	<br>
+		<br>
 	<!-------->
-	<label for=contrastInput>Contrast</label>
+			<div class=tooltip>
+	<label for=contrastInput class="p">Contrast</label>
+			<span class="tooltiptext">Increases/ Decreases difference in color values.</span></div>
 	<br>
 		<br>
 	<input type="range" id="contrastInput" min="-100" max="100" step="5" value="0" onchange="Apply()" class=contrastslider>
 	<br>
 		<br>
 	<!-------->
-	<!-- <label for=opacityInput>Opacity</label>
+			<div class=tooltip>
+	<label for=hueInput class="p">Hue Shifter</label>
+			<span class="tooltiptext">Moves each color of the image to the right/ left on the color spectrum.</span></div>
 	<br>
-	<input type="range" id="opacityInput" min="0" max="100" value="100" onchange="Apply()" class=opacityslider>
-	<br> -->
+		<br>
+	<input type="range" id="hueInput" min="0" max="300" step="10" value="0" onchange="Apply()" class=hueslider>
+	<br>
+		<br>
 	<!-------->
-	<label for=invertInput>Hue Shifter</label>
+			<div class=tooltip>
+	<label for=noiseInput class="p">Noise</label>
+			<span class="tooltiptext">Adds static.</span></div>
 	<br>
 		<br>
-	<input type="range" id="hueInput" min="0" max="300" step="10" value="0" onchange="Apply()" class=greyscaleslider>
+	<input type="range" id="noiseInput" min="0" max="50" step="1" value="0" onchange="Apply()" class=noiseslider>
 	<br>
 		<br>
-	<label for=invertInput>Noise</label>
+	<!-------->
+			<div class=tooltip>
+	<label for=tintOpacityInput class="p">Tint and Tint Strength</label>
+			<span class="tooltiptext">Choose a color with the color box. Then, choose the opacity of the color overlay.</span></div>
 	<br>
 		<br>
-	<input type="range" id="noiseInput" min="0" max="50" step="1" value="0" onchange="Apply()" class=greyscaleslider>
+	<input type="color" id="tintInput" onchange="Apply()" class=tintpicker>
+	<input type="range" id="tintOpacityInput" onchange="Apply()" min="0" max="100" step="5" value="0" class=tintslider>
 	<br>
 		<br>
-	<label for=invertInput>Tint and Tint Strength</label>
-	<br>
-		<br>
-	<input type="color" id="tintInput" onchange="Apply()">
-	<input type="range" id="tintOpacityInput" onchange="Apply()" min="0" max="100" step="5" value="0" class=greyscaleslider>
-	<br>
-		<br>
-	<label for=invertInput>Invert Colors</label>
+	<!-------->
+			<div class=tooltip>
+	<label for=invertInput class="p">Invert Colors</label>
+			<span class="tooltiptext">Inverts each color of the image.</span></div>
 	<br>
 		<br>
 	<input type="range" id="invertInput" min="0" max="1" step="1" value="0" onchange="Apply()" class=invertslider>
-		<br>
-	<label for=invertInput>Remove Color</label>
 	<br>
 		<br>
-	<input type="range" id="greyscaleInput" min="0" max="1" step="1" value="0" onchange="Apply()" class=invertslider>
-	</p>
+	<!-------->
+			<div class=tooltip>
+	<label for=greyscaleInput class="p">Remove Color</label>
+			<span class="tooltiptext">Changes alll colors to different values of grey.</span></div>
+	<br>
+		<br>
+	<input type="range" id="greyscaleInput" min="0" max="1" step="1" value="0" onchange="Apply()" class=greyscaleslider>
+	<br>
+		<br>
+	<!-------->
 </b>
-	<br>
 	<!--------> <!-------->
 	<!-- <b>
 	<button style="font-family: Helvetica ; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; box-shadow: 0px 0px 3px #000; margin: 20px"
@@ -98,15 +111,14 @@
 	<!-------->
 	<!-- <button style="font-family:Helvetica; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; box-shadow: 0px 0px 3px #000; margin: 20px"   onclick="RotateL();Break()">Rotate Left</button>
 	</b> -->
-	<br>
 	<!-------->
-		<button onclick="Save()" id="savebtn" class="btn btn-success">Save Image</button>
+		<input onclick="Save()" id="savebtn" class="btn btn-success">Save Image</input>
+		<br>
+			<br>
 	</div>
 </div>
-	<br>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script>
-
 	function success(data) {
 		 image1.src = data.name;
 
@@ -119,107 +131,9 @@
 		ImName=data.imageName
 		return ImName;
 	}
-    $(document).ready(showImage);
-
-   
-
-   
+    $(document).ready(showImage);   
 </script>
 	<!-------------------------------------->
-
-<script type="text/javascript">
-        	// var _ = document.querySelector("html");
-        	// _.className = ""
-        	// _.classList.add()
-	// 	function Blur(_blurnum) {
-	// 		blurnum = _blurnum + "px"
-	//         document.documentElement.style.setProperty(`--blurnum`,blurnum)
-	//     } ///
-	//     function Grey(_greynum) {
-	// 		greynum = _greynum + "%"
-	//         document.documentElement.style.setProperty(`--greynum`,greynum)
-	//     } ///
-	//     function Brightness(_brightnum) {
-	// 		brightnum = _brightnum + "%"
-	//         document.documentElement.style.setProperty(`--brightnum`,brightnum)
-	//     } ///
-	//      function Contrast(_contrastnum) {
-	// 		contrastnum = _contrastnum + "%"
-	//         document.documentElement.style.setProperty(`--contrastnum`,contrastnum)
-	//     } ///
-	//     function Opacity(_opacitynum) {
-	// 		opacitynum = _opacitynum + "%"
-	//         document.documentElement.style.setProperty(`--opacitynum`, opacitynum)
-	//     } ///
-	    
-	//     function Invert(_invertnum) {
-	// 		invertnum = _invertnum + "%"
-	//         document.documentElement.style.setProperty(`--invertnum`, invertnum)
-	//     } ///
-	//     //////////////////////////////////////////
-	//     	let flippedX = false
-	//     function FlipX() {
-	//     	if(flippedX == true) {
-	//     		document.documentElement.style.setProperty(`--flipx`,"1")
-	//     		flippedX = false
-	//     	}
-	//     	else if(flippedX != true) {
-	//     		document.documentElement.style.setProperty(`--flipx`,"-1")
-	//     		flippedX = true
-	//     	}
-	//     } ///
-	//     	let flippedY = false
-	//     function FlipY() {
-	//     	if(flippedY == true) {
-	//     		document.documentElement.style.setProperty(`--flipy`,"1")
-	//     		flippedY = false
-	//     	}
-	//     	else if(flippedY != true) {
-	//     		document.documentElement.style.setProperty(`--flipy`,"-1")
-	//     		flippedY = true
-	//     	}
-	//     } ///
-	// 		let degreeR = 90
-	//     function RotateR() {
-	//     	rotateR = degreeR + "deg"
-	//         document.documentElement.style.setProperty(`--rotateR`,rotateR)
-	//         degreeR += 90
-	//     } ///
-	//     	let degreeL = 90
-	//     function RotateL() {
-	//     	rotateL = degreeL + "deg"
-	//         document.documentElement.style.setProperty(`--rotateL`,rotateL)
-	//         degreeL -= 90
- //    } ///
-	// //////////////////////////////////////////
-	// 	let toggle = false
-	// 	let toggle2 = false
-	// function Break() {
-	// 		var img = document.getElementById("image1")
-	// 	if (toggle == true) {
-	// 			imagespace = (img.width - img.height) + "px"
-	// 		document.documentElement.style.setProperty(`--imagespace`,"imagespace")
-	// 		toggle = false
-	// 	}
-	// 	else {
-	// 			imagespace = (img.width - img.height)/2 + "px"
-	// 		document.documentElement.style.setProperty(`--imagespace`,imagespace)
-	// 		toggle = true
-	// 	}
-	// 	if(img.width <= img.height) { //If image is tall
-	// 		if(toggle2 == true) {//////card width decreasing/////
-	// 			document.documentElement.style.setProperty(`--cardwidth`,"auto")
-	// 			toggle2 = false
-	// 		}
-	// 		else {//////card width increasing/////
-	// 			cardwidth = img.height + "px"
-	// 			document.documentElement.style.setProperty(`--cardwidth`,cardwidth)
-	// 			toggle2 = true
-	// 		}
-	// 	}
-	// }
-</script>
-	<!------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js" integrity="sha512-JjFeUD2H//RHt+DjVf1BTuy1X5ZPtMl0svQ3RopX641DWoSilJ89LsFGq4Sw/6BSBfULqUW/CfnVopV5CfvRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/caman.js"></script>
 </body>
