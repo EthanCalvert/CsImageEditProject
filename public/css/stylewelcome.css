@@ -9,13 +9,13 @@ body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
 text-align: center;
 font-size: 50px;
 margin-bottom: 10px;
-text-shadow: 0px 0px 2px #fff;
+text-shadow: 0px 0px 2px #000;
 }
 .CreateText{
 text-align: center;
 font-size: 20px;
 margin-bottom: 10px;
-text-shadow: 0px 0px 2px #fff;
+text-shadow: 0px 0px 2px #000;
 }
 
 .Image-Edit-Card{
@@ -32,7 +32,7 @@ display: block;
 text-align: center;
 font-size: 20px;
 margin-bottom: 10px;
-//text-shadow: 0px 0px 2px #000;
+//text-shadow: 0px 0px 5px #000;
 }
 .LoginText{
 display: block; 
