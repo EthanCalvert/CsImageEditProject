@@ -182,6 +182,29 @@ text-shadow: 0px 0px 5px #000
   background: #006eff;
   cursor: pointer;
 }   /*//////////*/
+.rotateslider {
+  -webkit-appearance: none;
+  width: 750px;
+  height: 7px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  vertical-align: middle;
+}
+.rotateslider:hover {
+  opacity: 1;
+}
+
+.rotateslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 30px;
+  background: #006eff;
+  cursor: pointer;
+}   /*//////////*/
 .contrastslider {
   -webkit-appearance: none;
   width: 750px;
