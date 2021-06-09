@@ -23,85 +23,97 @@
 <br id=Break class=Break>
 <br>
 <!--------> <!-------->
+<!--------> <!-------->
 <b>
-	<p style="font-size: 25px; color:white; text-shadow: 0px 0px 3px #000; text-align: center" > 
-	<!-- <label for=blurInput>Blur</label>
 	<br>
-	<input type="range" id="blurInput" min="0"  max="10" step="1" value="0" onchange="Apply()" class=blurslider>
-	<br> -->
 	<!-------->
-	<label for=vibranceInput>Vibrance</label>
+			<div class=tooltip>
+	<label for="vibranceInput" class="p">Vibrance</label>
+			<span class="tooltiptext">Increases/ Decreases strength of each color.</span></div>
 	<br>
 		<br>
-	<input type="range" id="vibranceInput" min="-150" max="150" value="0" step="5" onchange="Apply()" class=greyscaleslider>
+	<input type="range" id="vibranceInput" min="-150" max="150" value="0" step="5" onchange="Apply()" class=vibranceslider>
 	<br>
 		<br>
 	<!-------->
-	<label for=brightInput>Brightness</label>
+			<div class=tooltip>
+	<label for=brightInput class="p">Brightness</label>
+			<span class="tooltiptext">Brightens/ Darkens image.</span></div>
 	<br>
 		<br>
 	<input type="range" id="brightInput" min="-100" max="100" step="5" value="0" onchange="Apply()" class=brightnessslider>
 	<br>
+		<br>
 	<!-------->
-	<label for=contrastInput>Contrast</label>
+			<div class=tooltip>
+	<label for=contrastInput class="p">Contrast</label>
+			<span class="tooltiptext">Increases/ Decreases difference in color values.</span></div>
 	<br>
 		<br>
 	<input type="range" id="contrastInput" min="-100" max="100" step="5" value="0" onchange="Apply()" class=contrastslider>
 	<br>
 		<br>
 	<!-------->
-	<!-- <label for=opacityInput>Opacity</label>
+			<div class=tooltip>
+	<label for=hueInput class="p">Hue Shifter</label>
+			<span class="tooltiptext">Moves each color of the image to the right/ left on the color spectrum.</span></div>
 	<br>
-	<input type="range" id="opacityInput" min="0" max="100" value="100" onchange="Apply()" class=opacityslider>
-	<br> -->
+		<br>
+	<input type="range" id="hueInput" min="0" max="300" step="10" value="0" onchange="Apply()" class=hueslider>
+	<br>
+		<br>
 	<!-------->
-	<label for=invertInput>Hue Shifter</label>
+			<div class=tooltip>
+	<label for=noiseInput class="p">Noise</label>
+			<span class="tooltiptext">Adds static.</span></div>
 	<br>
 		<br>
-	<input type="range" id="hueInput" min="0" max="300" step="10" value="0" onchange="Apply()" class=greyscaleslider>
+	<input type="range" id="noiseInput" min="0" max="50" step="1" value="0" onchange="Apply()" class=noiseslider>
 	<br>
 		<br>
-	<label for=invertInput>Noise</label>
+	<!-------->
+			<div class=tooltip>
+	<label for=tintOpacityInput class="p">Tint and Tint Strength</label>
+			<span class="tooltiptext">Choose a color with the color box. Then, choose the opacity of the color overlay.</span></div>
 	<br>
 		<br>
-	<input type="range" id="noiseInput" min="0" max="50" step="1" value="0" onchange="Apply()" class=greyscaleslider>
+	<input type="color" id="tintInput" onchange="Apply()" class=tintpicker><br>
+	<input type="range" id="tintOpacityInput" onchange="Apply()" min="0" max="100" step="5" value="0" class=tintslider>
 	<br>
 		<br>
-	<label for=invertInput>Tint and Tint Strength</label>
-	<br>
-		<br>
-	<input type="color" id="tintInput" onchange="Apply()">
-	<input type="range" id="tintOpacityInput" onchange="Apply()" min="0" max="100" step="5" value="0" class=greyscaleslider>
-	<br>
-		<br>
-	<label for=invertInput>Invert Colors</label>
+	<!-------->
+			<div class=tooltip>
+	<label for=invertInput class="p">Invert Colors</label>
+			<span class="tooltiptext">Inverts each color of the image.</span></div>
 	<br>
 		<br>
 	<input type="range" id="invertInput" min="0" max="1" step="1" value="0" onchange="Apply()" class=invertslider>
-		<br>
-	<label for=invertInput>Remove Color</label>
 	<br>
 		<br>
-	<input type="range" id="greyscaleInput" min="0" max="1" step="1" value="0" onchange="Apply()" class=invertslider>
-	</p>
+	<!-------->
+			<div class=tooltip>
+	<label for=greyscaleInput class="p">Remove Color</label>
+			<span class="tooltiptext">Changes all colors to grey values.</span></div>
+	<br>
+		<br>
+	<input type="range" id="greyscaleInput" min="0" max="1" step="1" value="0" onchange="Apply()" class=greyscaleslider>
+	<br>
+		<br>
+	<!-------->
+			<div class=tooltip>
+	<label for=rotateInput class="p">Rotate</label>
+			<span class="tooltiptext">Rotate the image by 90 degrees.</span></div>
+	<br>
+		<br>
+	<input type="range" id="rotateInput" min="-360" max="360" step="90" value="0" onchange="Apply()" class="rotateslider">
+	<br>
+		<br>
+	<!------------------------------------------------>
 </b>
-	<br>
-	<!--------> <!-------->
-	<!-- <b>
-	<button style="font-family: Helvetica ; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; box-shadow: 0px 0px 3px #000; margin: 20px"
-	onclick="FlipX()">Flip Horizontally</button> -->
-	<!-------->
-	<!-- <button style="font-family:Helvetica; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; box-shadow: 0px 0px 3px #000; margin: 20px"
-	onclick="FlipY()">Flip Vertically</button> -->
-	<!-------->
-	<!-- <button style="font-family:Helvetica; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; box-shadow: 0px 0px 3px #000; margin: 20px"   onclick="RotateR();Break()">Rotate Right</button> -->
-	<!-------->
-	<!-- <button style="font-family:Helvetica; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; box-shadow: 0px 0px 3px #000; margin: 20px"   onclick="RotateL();Break()">Rotate Left</button>
-	</b> -->
-	<br>
-	<!-------->
+	</div>
+</div>
 		<canvas id="myCanvas" width="100" height="100"></canvas>
-<button onclick="DownloadCanvasAsImage()">Download</button>
+<input type="button" onclick="DownloadCanvasAsImage()" value="Download">
 	</div>
 </div>
 	<br>
