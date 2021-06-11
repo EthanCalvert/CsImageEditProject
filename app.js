@@ -18,7 +18,7 @@ app.use(express.static('./public/views/images'));
 require('./config/passport')(passport)
 //mongoose
 //mongoose.connect('mongodb://localhost/test',{useNewUrlParser: true, useUnifiedTopology : true})
-mongoose.connect('mongodb://173.255.210.209/test',{useNewUrlParser: true, useUnifiedTopology : true})
+mongoose.connect('mongodb://localhost:27017/group10')
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
 
