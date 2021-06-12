@@ -67,7 +67,7 @@ passport.authenticate('local',{
                     newUser.save()
                     .then((value)=>{
                         console.log(value)
-                        req.flash('success_msg','You have now registered!');
+                        //req.flash('success_msg','You have now registered!');
                         res.redirect('/users/login');
                     })
                     .catch(value=> console.log(value));
@@ -80,7 +80,7 @@ passport.authenticate('local',{
 //logout
 router.get('/logout',(req,res)=>{
 req.logout();
-req.flash('success_msg','Now logged out');
+//req.flash('success_msg','Now logged out');
 res.redirect('/users/login'); 
 })
 module.exports  = router;
