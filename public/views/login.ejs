@@ -7,7 +7,7 @@
 <%- include ('./partials/messages') %>
 <form action="/users/login" method="POST">
 <div class="Image-Edit-Card">
-	<label class= "emailText" style="color:white;" for="email">Email</label>
+  <label class= "emailText" style="color:white;" for="email">Email</label>
 <input
 type="email"
 name="email"
@@ -15,7 +15,7 @@ placeholder=" Enter Email"
 />
 
 <div>
-	<br>
+  <br>
     <label class= "passwordText" style="color:white;" for="password">Password</label>
     <input
       type="password"
@@ -30,7 +30,9 @@ placeholder=" Enter Email"
 
   </div> 
    <br>
-<p style="color:white;" >Dont Have An Account?  <a href="/users/register"> Register</a></p>
+<p style="color:white;" >Dont Have An Account?  <br>
+  <br>
+  <a href="/users/register"> Register</a></p>
 
 </form>
 </html>
