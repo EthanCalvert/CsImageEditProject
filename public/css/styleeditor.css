@@ -17,6 +17,19 @@ body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
 	background: transparent;
 
 }
+.Image-Edit-Card2{
+  
+  display: table;
+  //background: #fff;
+  padding: 30px 40px;
+  box-shadow: 0px 0px 5px #ddd;
+
+}
+.DashboardCSS{
+
+  text-shadow: 0px 0px 4px #000
+
+}
 
 .text-center{
 text-align: center;
