@@ -56,7 +56,8 @@ button {
 }
 
 body {
-  background-image: url('background.jpg');
+  background-image: url('background.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
