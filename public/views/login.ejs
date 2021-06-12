@@ -1,23 +1,31 @@
-<h1> Login </h1>
+<html>
+<link rel="stylesheet" href="/css/stylelogin.css">
+
+<h1 class="LoginText" style="color:white;">Login </h1>
 <%- include ('./partials/messages') %>
 <form action="/users/login" method="POST">
-<div>
-<label for="email">Email</label>
+<div class="Image-Edit-Card">
+	<label class= "emailText" style="color:white;" for="email">Email</label>
 <input
 type="email"
 name="email"
-placeholder="Enter Email"
+placeholder=" Enter Email"
 />
-</div>
+
 <div>
-    <label for="password">Password</label>
+	<br>
+    <label class= "passwordText" style="color:white;" for="password">Password</label>
     <input
       type="password"
       name="password"
-      placeholder="Enter Password"
+      placeholder=" Enter Password"
     />
-  
-</div>
+    <div>
+  <br>
+<div id="wrapper">
 <button type="submit" class="btn btn-primary btn-block">Login</button>
-   
+</div>
+
+  </div> 
 </form>
+</html>

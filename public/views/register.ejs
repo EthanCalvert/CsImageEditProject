@@ -1,45 +1,59 @@
-<h1>Register</h1>
+<html>
+<link rel="stylesheet" href="/css/styleregister.css">
+
+<h1 class="RegisterText" style="color:white;">Register</h1>
+<br>
 <%- include ('./partials/messages') %>
 <form action="/users/register" method="POST">
-<div>
-    <label for="name">Name</label>
-    <input
+
+  <div class="Image-Edit-Card">
+    <label class="NameText" style="color:white;" for="name">Name: </label>
+    <input class="NameInput"
       type="name"
       name="name"
-      placeholder="Enter Name"
+      placeholder=" Enter Name"
       value="<%= typeof name != 'undefined' ? name : '' %>"
     />
   
-</div>
+
 <div>
-    <label for="email">Email</label>
-    <input
+  <br>
+    <label class="EmailText" style="color:white;" for="email">Email: </label>
+    <input class="EmailInput"
       type="email"
       name="email"
-      placeholder="Enter Email"
+      placeholder=" Enter Email"
       value="<%= typeof email != 'undefined' ? email : '' %>"
     />
   </div>
   <div >
-    <label for="password">Password</label>
-    <input
+    <br>
+    <label class="PasswordText" style="color:white;" for="password">Password: </label>
+    <input class="PasswordInput"
       type="password"
       name="password"
-      placeholder="Create Password"
+      placeholder=" Create Password"
       value="<%= typeof password != 'undefined' ? password : '' %>"
     />
   </div>
   <div >
-    <label for="password2">Confirm Password</label>
-    <input
+    <br>
+    <label class="Password2Text" style="color:white;" for="password2">Confirm Password: </label>
+    <input class="Password2Input"
       type="password"
       name="password2"
-      placeholder="Confirm Password"
+      placeholder=" Confirm Password"
       value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
     />
   </div>
+  <br>
   <button type="submit" class="btn btn-primary btn-block">
     Register
   </button>
 </form>
-<p >Have An Account? <a href="/users/login">Login</a></p>
+<div>
+  <br>
+<p style="color:white;" > Have An Account?  <a href="/users/login"> Login</a></p>
+</div>
+
+</html>
