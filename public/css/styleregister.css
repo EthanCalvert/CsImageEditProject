@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
+* { padding: 0; margin: 0; box-sizing: border-box }
+body {font-family:'Lato',sans-serif;padding: 30px;background: #eaebeb;}
+
+/**************/
+
+
+
+.RegisterText{
+display: block;
+text-align: center;
+font-size: 80px;
+margin-bottom: 10px;
+text-shadow: 0px 0px 5px #000;
+}
+.CreateText{
+text-align: center;
+font-size: 30px;
+margin-bottom: 10px;
+text-shadow: 0px 0px 5px #000;
+}
+
+.Image-Edit-Card{
+	margin: auto;
+	display: table;
+	//background: #fff;
+	opacity: 1;
+	padding: 30px 40px;
+	box-shadow: 0px 0px 5px #ddd;
+
+}
+
+.NameText{
+text-align: center;
+
+margin-bottom: 10px;
+text-shadow: 0px 0px 5px #000;
+}
+.EmailText{
+text-align: center;
+
+margin-bottom: 10px;
+text-shadow: 0px 0px 5px #000;
+}
+.PasswordText{
+text-align: center;
+
+margin-bottom: 10px;
+text-shadow: 0px 0px 5px #000;
+}
+.Password2Text{
+text-align: center;
+
+margin-bottom: 10px;
+text-shadow: 0px 0px 5px #000;
+}
+
+.LoginText{
+display: block; 
+text-align: center;
+
+font-size: 30px;
+margin-bottom: 10px;
+//text-shadow: 0px 0px 2px #fff;
+}
+
+button {
+  height: 20px;
+  width: 100px;
+}
+body {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
