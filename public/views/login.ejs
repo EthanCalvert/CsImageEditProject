@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/css/stylelogin.css">
 
 <h1 class="LoginText" style="color:white;">Login </h1>
+  <%- include ('./partials/messages') %>
 <div>
 <br>
-<%- include ('./partials/messages') %>
 <form action="/users/login" method="POST">
 <div class="Image-Edit-Card">
   <label class= "emailText" style="color:white;" for="email">Email</label>
@@ -30,7 +30,7 @@ placeholder=" Enter Email"
 
   </div> 
    <br>
-<p style="color:white;" >Dont Have An Account?  <br>
+<p class="questionText" >Dont Have An Account?  <br>
   <br>
   <a href="/users/register"> Register</a></p>
 
