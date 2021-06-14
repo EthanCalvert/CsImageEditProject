@@ -28,12 +28,12 @@ passport.authenticate('local',{
     }
     //check if match
     if(password !== password2) {
-        errors.push({msg : "passwords dont match"});
+        errors.push({msg : "Passwords do not match"});
     }
     
     //check if password is more than 6 characters
     if(password.length < 6 ) {
-        errors.push({msg : 'password atleast 6 characters'})
+        errors.push({msg : 'Password must be at least 6 characters'})
     }
     if(errors.length > 0 ) {
     res.render('register', {
@@ -47,7 +47,7 @@ passport.authenticate('local',{
        User.findOne({email : email}).exec((err,user)=>{
         console.log(user);   
         if(user) {
-            errors.push({msg: 'email already registered'});
+            errors.push({msg: 'Email already registered'});
             res.render('register',{errors,name,email,password,password2})  
            } else {
             const newUser = new User({
